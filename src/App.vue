@@ -6,6 +6,8 @@
 </template>
 
 <script>
+// Final
+
 export default {
   name: "app",
 
