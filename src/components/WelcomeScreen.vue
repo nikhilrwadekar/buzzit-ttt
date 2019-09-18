@@ -1,10 +1,16 @@
 <template>
-  <div>
-    <h1>Welcome to TicTacToe!</h1>
-    <h2>Organized by {{organizer}}</h2>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to TicTacToe!</h1>
+      <h2>Organized by {{organizer}}</h2>
 
-    <!-- Router link to get player names -->
-    <button @click="$router.push({ path: 'playernames' })">Start Playing</button>
+      <!-- Router link to get player names -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        @click="$router.push({ path: 'playernames' })"
+      >Start Playing</button>
+    </div>
   </div>
 </template>
 
