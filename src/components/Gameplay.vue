@@ -68,7 +68,7 @@ export default {
     };
   },
   methods: {
-    // Make move if winner hasn't been declared
+    // Make move if winner hasn't been declared AND it hasn't been clicked AND the total count is < 9
     makeMove(e, index) {
       if (
         !this.winnerDeclared &&
@@ -142,20 +142,15 @@ export default {
 </script>
 
 <style scoped>
+/* Buttons for the Game */
 button {
-  /* font-size: 3rem !important;
-  padding: 2rem;
-  box-sizing: border-box;
-  border: 2px solid black;
-  margin: 2rem;
-  color: white;
-  background-color: #000; */
   height: calc(100vh / 5);
   background: transparent;
   border: 1px solid #555;
   font-size: 2rem;
 }
 
+/* Grid Layout for the Board itself */
 #board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -167,6 +162,8 @@ button {
   max-width: 500px;
   margin: 0 auto;
 }
+
+/* Animation */
 
 .smoothUX-enter-active {
   animation: smoothUX 0.25s;
